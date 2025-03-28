@@ -1,0 +1,133 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Full Page Centered Layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    width: 80vw;
+    height: 70vh;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.BIGchatCont{
+    padding-top: 150px;
+}
+/* Chat Area */
+.chat-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* User & AI Chat Boxes */
+.user-chat-box, .ai-chat-box {
+    width: 60%;
+    position: relative;
+}
+
+.user-chat-box {
+    align-self: flex-end;
+}
+
+.ai-chat-box {
+    align-self: flex-start;
+}
+
+.user-chat-area, .ai-chat-area {
+    padding: 15px;
+    font-size: 18px;
+    box-shadow: 2px 2px 10px black;
+    border-radius: 20px;
+    max-width: 80%;
+}
+
+/* User Message */
+.user-chat-area {
+    background-color: #388E3C;
+    color: white;
+    border-radius: 20px 0 20px 20px;
+}
+
+/* AI Message */
+.ai-chat-area {
+    background-color: white;
+    color: black;
+    border-radius: 0 20px 20px 20px;
+}
+
+/* AI & User Images */
+.user-image, .ai-image {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 10px black);
+}
+
+.user-image {
+    right: -60px;
+}
+
+.ai-image {
+    left: -60px;
+}
+
+/* Input Section */
+.prompt-area {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #ccc;
+}
+
+/* Input Box */
+.prompt-area input {
+    width: 60%;
+    height: 50px;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 10px black;
+}
+
+/* Buttons */
+.prompt-area button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    box-shadow: 2px 2px 10px black;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.prompt-area button:hover {
+    background-color: rgba(0, 0, 0, 0.29);
+}

@@ -1,0 +1,18 @@
+.bigBoss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items */
+    gap: 30px;
+    max-width: 1200px; /* Restrict width */
+    margin: auto;
+    column-gap: 45px;
+}
+
+.bigBoss > div {
+    flex: 1 1 calc(30% - 50px); /* Reduce width slightly to allow more spacing */
+    max-width: calc(100% - 50px);
+}
+.badaDabba{
+    padding-top: 150px;
+
+}

@@ -1,0 +1,65 @@
+.explore-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 70px;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.explore-heading {
+  background-color: #e3f2e3; /* Light green background */
+  padding: 20px 50px;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 20px;
+  color: #2c5f2d; /* Deep green text */
+}
+
+.explore-line {
+  width: 90%;
+  height: 2px;
+  background-color: #4caf50; /* Green line */
+  margin: 20px 0;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  width: 97vw;
+  gap: 20px;
+}
+
+/* 🎨 Fade-in & Scale-up Effect */
+.feature-box {
+  flex: 1;
+  height: 250px;
+  background: linear-gradient(135deg, #ffffff, #e8f5e9); /* Soft gradient */
+  color: #2c5f2d; /* Deep green text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 2px solid #4caf50; /* Green border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.features-container.visible .feature-box {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 20px rgba(76, 175, 80, 0.8); /* Green glow effect */
+  cursor: pointer;
+}
+.explore-wrapper{
+  padding-top: 100px;
+}

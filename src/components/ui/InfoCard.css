@@ -1,0 +1,157 @@
+/* 🟠 Main Card Styling
+.info-card {
+    width: 100%;
+    background: #2c2c2c; 
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.info-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.6); 
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    column-gap: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-title {
+    background: #d32f2f; 
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+
+.info-value {
+    background: #4caf50; 
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+
+.info-title:hover,
+.info-value:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 12px rgba(255, 165, 0, 0.8); 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.info-card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .info-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+} */
+ /* 🟠 Main Card Styling */
+.info-card {
+    width: 100%;
+    background: #2c2c2c; /* Dark background for contrast */
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🚀 Hover Effect */
+.info-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.6); /* Neon Orange Glow */
+}
+
+/* 🔄 Flex Row for Each Info Pair */
+.info-row {
+    display: flex;
+    align-items: center;
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative; /* Needed for absolute positioning */
+    overflow: hidden;
+    width: 100%;
+}
+
+/* 🔴 Red Box for Titles (Takes Full Width Initially) */
+.info-title {
+    background: #d32f2f; /* Dark Red */
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    width: 100%; /* 👈 Takes full width */
+    transition: width 0.5s ease-in-out;
+}
+
+/* 🟢 Green Box for Values (Hidden Initially) */
+.info-value {
+    background: #4caf50; /* Green */
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    position: absolute; /* 👈 Remove from flex flow */
+    right: 0;
+    width: 50%; /* 👈 Hidden initially */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* 🌟 Hover Effect - Shrink Red & Show Green */
+.info-row:hover .info-title {
+    width: 50%;
+}
+
+.info-row:hover .info-value {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+    .info-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

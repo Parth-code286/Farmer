@@ -1,0 +1,91 @@
+/* Parent Container */
+.bigBoss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+/* LiveCard Container */
+.box-container {
+    width: 350px;
+    background-color: #f4f9f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.box-container:hover {
+    transform: scale(1.02);
+}
+
+/* Header & Market */
+.header, .market {
+    background-color: #b71c1c;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Data Container */
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: #240090;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Title & Values */
+.data-title {
+    background-color: #ffcc33;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.data-value {
+    background-color: #44cc44;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Search Bar */
+.SEARCH {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.SEARCH input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .bigBoss {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-container {
+        width: 90%;
+    }
+}

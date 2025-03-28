@@ -1,0 +1,128 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e8f5e9; /* Soft green background */
+    color: #3e2723; /* Deep brown text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dashboard Container */
+.dash-container {
+    background-color: #ffffff; /* White card */
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 70%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 128, 0, 0.2); /* Soft green shadow */
+    border: 3px solid #2e7d32; /* Green border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.dash-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 128, 0, 0.4);
+}
+
+/* Heading styling */
+.heading h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #2e7d32; /* Vibrant Green */
+    text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.6); /* Neon glow */
+    margin-bottom: 15px;
+}
+
+/* Neon Content Box */
+.content-dash {
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: #ffd700; /* Golden highlight */
+    color: #3e2723; /* Deep brown text */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Hover effect on the content box */
+.content-dash:hover {
+    box-shadow: 0px 8px 20px rgba(255, 215, 0, 0.7);
+    transform: scale(1.05);
+}
+
+/* Feedback Form */
+.feedback-form {
+    margin-top: 20px;
+    padding: 20px;
+    background: #1b5e20;
+    border-radius: 10px;
+    color: white;
+    max-width: 60%;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(27, 94, 32, 0.4);
+}
+
+/* Textarea */
+.feedback-form textarea {
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #ffeb3b;
+    border-radius: 5px;
+    background: #fff;
+    color: #3e2723;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.feedback-form textarea:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+}
+
+/* Submit Button */
+.feedback-form button {
+    background: #ff9800;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.feedback-form button:hover {
+    background: #ff5722;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dash-container {
+        max-width: 90%;
+    }
+
+    .content-dash {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .feedback-form {
+        max-width: 80%;
+    }
+}

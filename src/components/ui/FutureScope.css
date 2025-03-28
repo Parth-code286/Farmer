@@ -1,0 +1,65 @@
+/* Bright, Nature-Inspired Background */
+.future-container {
+    height: 120vh; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px; /* Increased spacing */
+    align-items: center;
+    justify-content: center;
+    color: #2c5f2d; /* Deep green for text */
+    text-align: center;
+    padding: 80px 30px; /* Increased padding */
+    overflow: hidden;
+}
+
+/* Green Gradient Heading */
+.future-heading {
+    font-size: 4rem; /* Bigger font */
+    margin-bottom: 40px; /* More spacing */
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #1b5e20, #4caf50); /* Rich green tones */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Cards container */
+.scope-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* More gap between cards */
+    max-width: 1400px; /* Wider container */
+}
+
+/* Vibrant Nature-Inspired Cards */
+.scope-card {
+    flex: 1;
+    min-width: 300px; /* Increased size */
+    max-width: 350px; /* Increased size */
+    height: 220px; /* Taller card */
+    background: linear-gradient(135deg, #fff, #dcedc8); /* Fresh, soft green */
+    border: 3px solid #4caf50; /* Thicker border */
+    border-radius: 20px; /* Softer rounded edges */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem; /* Larger text */
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(70px); /* Increased initial movement */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Parallax effect - appears when scrolled */
+.scope-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect - Soft Glow */
+.scope-card:hover {
+    box-shadow: 0px 0px 20px rgba(76, 175, 80, 0.8); /* More intense glow */
+    transform: scale(1.1); /* Bigger hover effect */
+}

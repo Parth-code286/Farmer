@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('https://source.unsplash.com/1600x900/?nature,farmland,forest') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgba(46, 125, 50, 0.95); /* Dark green with slight transparency */
+    padding: 15px 30px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    max-width: 1600px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Navbar Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 100, 0, 0.3);
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 600;
+    color: #39ff14;
+    text-shadow: 2px 2px 5px #6b4226;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    position: relative;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover effect with background color animation */
+.nav-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #ff9800;
+    transform: scaleX(0);
+    transform-origin: right;
+    z-index: -1;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link-active {
+    color: #ff9800;
+    text-decoration: underline;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn, .signup-btn {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-btn {
+    background-color: #ffeb3b;
+    color: #2e7d32;
+}
+
+.signup-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #ffd600;
+}
+
+.signup-btn:hover {
+    background-color: #ffb74d;
+}
+
+/* Chatbot Button */
+.chatbotAPP {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(0, 100, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chatbotAPP:hover {
+    background: linear-gradient(135deg, #66BB6A, #1B5E20);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(0, 120, 0, 0.7);
+}

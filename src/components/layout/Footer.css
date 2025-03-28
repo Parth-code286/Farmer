@@ -1,0 +1,106 @@
+/* Ensure the root container takes full height */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main App Container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures it takes the full viewport height */
+}
+
+/* Content - Takes available space to push footer down */
+.content {
+    flex: 1; /* Pushes the footer to the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Footer - Stays at the bottom */
+.footer {
+    background-color: #1B5E20; /* Darker Green */
+    color: white;
+    padding: 30px 40px;
+    width: 100%;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* "Created by Boring Bunch" - Plain Text */
+.footer-text {
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+}
+
+.footer-container {
+    width: 80vw;
+}
+
+/* Feedback Form Container */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Feedback Label */
+.feedback-form label {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+/* Feedback Textarea */
+.feedback-form textarea {
+    width: 300px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid #FFD700; /* Yellow */
+    font-size: 16px;
+    background-color: white;
+    color: #1B5E20; /* Dark Green */
+}
+
+/* Submit Button */
+.feedback-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #FF9800; /* Orange */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.feedback-form button:hover {
+    background-color: #FFB74D; /* Light Orange */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .feedback-form textarea {
+        width: 100%;
+    }
+}
